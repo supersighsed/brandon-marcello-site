@@ -64,3 +64,10 @@ body{
 nav a{
   margin-right:20px;
 }
+.view-all {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
