@@ -1,38 +1,34 @@
 async function loadLatestStories() {
-  const container = document.getElementById("latest-stories");
+  const el = document.getElementById("latest-stories");
+  if (!el) return;
 
   try {
-    const response = await fetch(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://www.cbssports.com/rss/headlines/college-football/"
-    );
+    const r = await fetch("/api/latest", { cache: "no-store" });
+    const data = await r.json();
 
-    const data = await response.json();
+    if (!data.stories || !data.stories.length) throw new Error("No stories returned");
 
-    // Filter only Brandon Marcello stories
-    const marcelloStories = data.items.filter(item =>
-      item.link.includes("/writers/brandon-marcello/") ||
-      item.author === "Brandon Marcello"
-    );
-
-    // Take latest 3
-    const latest = marcelloStories.slice(0, 3);
-
-    container.innerHTML = latest.map(story => `
-      <div class="item">
-        <div>
-          <a href="${story.link}" target="_blank">${story.title}</a>
-          <div class="meta">CBS Sports • ${new Date(story.pubDate).toLocaleDateString()}</div>
+    el.innerHTML = data.stories
+      .slice(0, 3)
+      .map(
+        (s) => `
+        <div class="item">
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <a href="${s.link}" target="_blank" rel="noreferrer">${s.title}</a>
+            <div class="meta">CBS Sports • Latest</div>
+          </div>
+          <span class="tag">Latest</span>
         </div>
-        <span class="tag">Latest</span>
-      </div>
-    `).join("");
-
-  } catch (error) {
-    container.innerHTML = `
+      `
+      )
+      .join("");
+  } catch (err) {
+    el.innerHTML = `
       <div class="item">
-        <a href="https://www.cbssports.com/writers/brandon-marcello/" target="_blank">
+        <a href="https://www.cbssports.com/writers/brandon-marcello/" target="_blank" rel="noreferrer">
           View latest stories at CBS Sports →
         </a>
+        <span class="tag">Fallback</span>
       </div>
     `;
   }
