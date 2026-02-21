@@ -337,3 +337,36 @@ a:hover{ color:var(--accent); }
 
 /* Footer */
 .site-footer{border-top:1px solid var(--border); padding: 26px 0 40px; color:var(--muted); font-size:12px}
+
+
+/* Reseda-style hero overlap */
+.hero{ padding: 44px 0 26px; }
+.hero-media{
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.hero-media img{ width:100%; height:100%; object-fit: cover; display:block; }
+
+@media(min-width: 980px){
+  .hero-grid{ align-items: end; }
+  /* pull image up and slightly right for premium overlap feel */
+  .hero-media{
+    transform: translateY(-14px);
+  }
+  .hero-media::before{
+    content:"";
+    position:absolute; inset:-1px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(11,18,32,.08);
+    pointer-events:none;
+  }
+}
+/* bottom blend (if not already present) */
+.hero-media::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(to bottom, rgba(247,246,243,0) 62%, rgba(247,246,243,1) 100%);
+  pointer-events:none;
+}
