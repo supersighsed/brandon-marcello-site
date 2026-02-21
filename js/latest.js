@@ -1,34 +1,65 @@
-(async function(){
-  const mount = document.getElementById('latest-stories');
-  if(!mount) return;
+(function () {
+  const mount = document.getElementById("latest-stories");
+  if (!mount) return;
 
-  const render = (items)=>{
-    if(!items || !items.length){
-      mount.innerHTML = '<div class="card pad"><div class="card-meta">No stories found.</div></div>';
-      return;
+  function card(item) {
+    const a = document.createElement("a");
+    a.className = "latest-card";
+    a.href = item.url || "#";
+    a.target = "_blank";
+    a.rel = "noreferrer";
+
+    const thumb = document.createElement("div");
+    thumb.className = "latest-thumb";
+
+    if (item.image) {
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = "";
+      thumb.appendChild(img);
+    } else {
+      thumb.classList.add("latest-thumb--empty");
     }
-    mount.innerHTML = items.map((s)=>{
-      const safeTitle = (s.title||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-      const safeDate = (s.date||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-      const safeHref = (s.url||'#');
-      const img = s.image ? `<div class="latest-thumb"><img loading="lazy" alt="" src="${s.image}"></div>` : `<div class="latest-thumb"></div>`;
-      return `
-        <a class="latest-card" href="${safeHref}" target="_blank" rel="noopener">
-          ${img}
-          <div>
-            <div class="latest-title">${safeTitle}</div>
-            <div class="latest-meta">${safeDate ? safeDate : 'CBS Sports'}</div>
-          </div>
-        </a>`;
-    }).join('');
-  };
 
-  try{
-    const res = await fetch('/api/latest', { cache: 'no-store' });
-    const data = await res.json();
-    if(!res.ok) throw new Error(data?.error || 'Request failed');
-    render(data.items?.slice(0,3));
-  }catch(e){
-    mount.innerHTML = `<div class="card pad"><div class="card-meta">Latest stories unavailable. (${(e && e.message) ? e.message : 'error'})</div></div>`;
+    const body = document.createElement("div");
+    body.className = "latest-body";
+
+    const title = document.createElement("div");
+    title.className = "latest-title";
+    title.textContent = item.title || "";
+
+    const meta = document.createElement("div");
+    meta.className = "latest-meta";
+    meta.textContent = item.date ? `CBS Sports • ${item.date}` : "CBS Sports";
+
+    body.appendChild(title);
+    body.appendChild(meta);
+
+    a.appendChild(thumb);
+    a.appendChild(body);
+
+    return a;
   }
+
+  async function run() {
+    try {
+      const res = await fetch("/api/latest", { cache: "no-store" });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || "Request failed");
+
+      const items = (data.items || []).slice(0, 3);
+      mount.innerHTML = "";
+
+      if (!items.length) {
+        mount.textContent = "No stories found.";
+        return;
+      }
+
+      items.forEach((it) => mount.appendChild(card(it)));
+    } catch (e) {
+      mount.textContent = `Latest stories unavailable. (${e && e.message ? e.message : "error"})`;
+    }
+  }
+
+  run();
 })();
