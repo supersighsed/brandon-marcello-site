@@ -339,34 +339,32 @@ a:hover{ color:var(--accent); }
 .site-footer{border-top:1px solid var(--border); padding: 26px 0 40px; color:var(--muted); font-size:12px}
 
 
-/* Reseda-style hero overlap */
-.hero{ padding: 44px 0 26px; }
+/* Hero image: fill container (no white slab), plus subtle blend like Indiana module */
 .hero-media{
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
   position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: transparent;
+  box-shadow: var(--shadow);
+  /* Ensure the container has a real height so the image can fill it */
+  aspect-ratio: 16 / 9;
 }
-.hero-media img{ width:100%; height:100%; object-fit: cover; display:block; }
-
-@media(min-width: 980px){
-  .hero-grid{ align-items: end; }
-  /* pull image up and slightly right for premium overlap feel */
-  .hero-media{
-    transform: translateY(-14px);
-  }
-  .hero-media::before{
-    content:"";
-    position:absolute; inset:-1px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(11,18,32,.08);
-    pointer-events:none;
-  }
+.hero-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
 }
-/* bottom blend (if not already present) */
+/* Blend into page background */
 .hero-media::after{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(to bottom, rgba(247,246,243,0) 62%, rgba(247,246,243,1) 100%);
+  background: linear-gradient(to bottom, rgba(247,246,243,0) 60%, rgba(247,246,243,1) 100%);
   pointer-events:none;
+}
+/* Desktop overlap polish */
+@media(min-width: 980px){
+  .hero-grid{ align-items: end; }
+  .hero-media{ transform: translateY(-18px) translateX(6px); }
 }
