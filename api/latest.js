@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       try {
         const json = JSON.parse(ldMatch[1].trim());
         // Writer pages may have ItemList
-        const list = json?.itemListElement || json?.@graph?.find?.(n => n?.itemListElement)?.itemListElement;
+        const list = json?.itemListElement || json?.['@graph']?.find?.(n => n?.itemListElement)?.itemListElement;
         if (Array.isArray(list)) {
           for (const el of list) {
             const u = el?.url || el?.item?.url;
