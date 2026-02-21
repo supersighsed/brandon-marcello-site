@@ -133,9 +133,3 @@ nav a{
   .latest-card{ grid-template-columns: 72px 1fr; }
   .latest-thumb{ width:72px; height:50px; }
 }
-
-/* Responsive: bigger thumbs on desktop */
-@media(min-width:900px){
-  .latest-card{ grid-template-columns: 120px 1fr; }
-  .latest-thumb{ width:120px; height:80px; }
-}
