@@ -334,16 +334,6 @@ a:hover{ color:var(--accent); }
 .work-item .m{color:var(--muted); font-size:12px; margin-top:10px}
 @media(max-width: 900px){ .work-item{grid-column: span 12;} }
 
-/* Bio dropcap */
-.dropcap p:first-of-type::first-letter{
-  float:left;
-  font-family: Newsreader, serif;
-  font-weight:750;
-  font-size: 3.2em;
-  line-height: 0.9;
-  padding-right: .12em;
-  padding-top: .08em;
-}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--border); padding: 26px 0 40px; color:var(--muted); font-size:12px}
