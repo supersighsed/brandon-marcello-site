@@ -2,26 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bio — Brandon Marcello</title>
-  <meta name="description" content="Bio, awards, and background." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bio | Brandon Marcello</title>
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header class="masthead">
-    <div class="minner">
-      <div class="brand"><span class="brand-dot" aria-hidden="true"></span></div>
+
+<header class="site-header">
+  <div class="frame">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <small>College Football Insider</small>
+        <strong>Brandon Marcello</strong>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a class="active" href="/about">Bio</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/media">Media</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="navlink">Home</a>
+        <a href="/about.html" class="navlink">Bio</a>
+        <a href="/portfolio.html" class="navlink">Portfolio</a>
+        <a href="/media.html" class="navlink">Media</a>
+        <a href="/contact.html" class="navlink">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
+<main class="frame" style="padding:40px 0 64px;">
+  <section class="hero" style="padding: 14px 0 26px;">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Bio</div>
+        <h1 class="page-title">Brandon Marcello</h1>
+        <div class="page-lede">College Football Insider — CBS Sports</div>
+      </div>
+      <div class="hero-media">
+        <img src="images/brandon_bio_wide_1600x900.jpg" alt="Brandon Marcello" />
+      </div>
+    </div>
+  </section>
+
+  <section class="card pad dropcap" style="margin-top:14px;">
+    <section class="hero" style="padding:40px 0 26px;">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Bio</div>
+          <h1 class="h1">Brandon Marcello</h1>
+          <div class="lede">College Football Insider — CBS Sports</div>
+        </div>
+        <div class="hero-media">
+          <img src="images/brandon_bio_wide_1600x900.jpg" alt="Brandon Marcello" />
+        </div>
+      </div>
+    </section>
+
+
     <section class="hero">
       <div class="hero-inner">
         <div>
@@ -116,8 +149,23 @@
         <a href="/contact">Email</a>
       </div>
     </footer>
-  </main>
+  </section>
+</main>
 
+<footer class="site-footer">
+  <div class="frame">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>© <span id="y"></span> Brandon Marcello</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="https://www.twitter.com/bmarcello" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/brandonmarcello" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.YouTube.com/@brandonmarcello" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:brandonmarcello@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>

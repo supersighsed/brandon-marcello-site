@@ -2,68 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Media — Brandon Marcello</title>
-  <meta name="description" content="Video and other media appearances." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media | Brandon Marcello</title>
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header class="masthead">
-    <div class="minner">
-      <div class="brand"><span class="brand-dot" aria-hidden="true"></span></div>
+
+<header class="site-header">
+  <div class="frame">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <small>College Football Insider</small>
+        <strong>Brandon Marcello</strong>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/about">Bio</a>
-        <a href="/portfolio">Portfolio</a>
-        <a class="active" href="/media">Media</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="navlink">Home</a>
+        <a href="/about.html" class="navlink">Bio</a>
+        <a href="/portfolio.html" class="navlink">Portfolio</a>
+        <a href="/media.html" class="navlink">Media</a>
+        <a href="/contact.html" class="navlink">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">Media</div>
-          <h1 class="hero-title">Video</h1>
-          <p class="hero-sub">Highlights from <em>The College Football Insiders</em> and other appearances.</p>
-        </div>
-        <div class="hero-photo" aria-hidden="true">
-          <img src="/images/cbssn-logo.jpg" alt="" />
-        </div>
-      </div>
-    </section>
+<main class="frame" style="padding:40px 0 64px;">
+  <div class="kicker">Media</div>
+  <h1 class="page-title">On-air & Video</h1>
+  <p class="page-lede">Recent segments from <em>The College Football Insiders</em> and other appearances.</p>
 
-    <section class="section">
-      <div class="h2">The College Football Insiders</div>
-      <div class="card" style="border-radius:22px;overflow:hidden;">
-        <div style="position:relative;padding-top:56.25%;background:#0b1220;">
-          <iframe
-            title="The College Football Insiders Playlist"
-            src="https://www.youtube.com/embed/videoseries?list=PL-5Yp3exzDXAcwtLuxmUtBcYPyny38PIm"
-            style="position:absolute;inset:0;width:100%;height:100%;border:0;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="card pad" style="margin-top:12px;">
-        <div class="card-meta">Prefer YouTube? <a href="https://youtube.com/playlist?list=PL-5Yp3exzDXAcwtLuxmUtBcYPyny38PIm" target="_blank" rel="noopener">Open the playlist</a>.</div>
-      </div>
-    </section>
+  <section style="margin-top:18px;">
+    <div class="card" style="overflow:hidden;">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PL-5Yp3exzDXAcwtLuxmUtBcYPyny38PIm" title="The College Football Insiders playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; aspect-ratio: 16/9; border:0; display:block;"></iframe>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:10px;color:var(--muted);font-size:12px;">
+      <img src="/images/cbssn-logo.jpg" alt="CBS Sports Network" style="width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:#fff;object-fit:cover;">
+      <div>Subscribe on YouTube: <a href="https://www.YouTube.com/@brandonmarcello" target="_blank" rel="noopener">@brandonmarcello</a></div>
+    </div>
+  </section>
+</main>
 
-    <footer class="footer">
+<footer class="site-footer">
+  <div class="frame">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
       <div>© <span id="y"></span> Brandon Marcello</div>
-      <div class="social">
-        <a href="https://www.instagram.com/brandonmarcello" target="_blank" rel="noopener">Instagram</a>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="https://www.twitter.com/bmarcello" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/brandonmarcello" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.YouTube.com/@brandonmarcello" target="_blank" rel="noopener">YouTube</a>
-        <a href="/contact">Email</a>
+        <a href="mailto:brandonmarcello@gmail.com">Email</a>
       </div>
-    </footer>
-  </main>
-
+    </div>
+  </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>

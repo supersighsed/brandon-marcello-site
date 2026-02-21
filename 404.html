@@ -2,36 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Not Found — Brandon Marcello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found | Brandon Marcello</title>
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header class="masthead">
-    <div class="minner">
-      <div class="brand"><span class="brand-dot" aria-hidden="true"></span></div>
+
+<header class="site-header">
+  <div class="frame">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <small>College Football Insider</small>
+        <strong>Brandon Marcello</strong>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/about">Bio</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/media">Media</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="navlink">Home</a>
+        <a href="/about.html" class="navlink">Bio</a>
+        <a href="/portfolio.html" class="navlink">Portfolio</a>
+        <a href="/media.html" class="navlink">Media</a>
+        <a href="/contact.html" class="navlink">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">404</div>
-          <h1 class="hero-title">Page not found</h1>
-          <p class="hero-sub">That link doesn’t go anywhere. Head back home.</p>
-          <div class="hero-cta"><a class="btn primary" href="/">Go to Home</a></div>
-        </div>
-        <div class="hero-photo" aria-hidden="true"><img src="/images/headshot-home.jpg" alt="" /></div>
+<main class="frame" style="padding:60px 0 80px;">
+  <div class="kicker">404</div>
+  <h1 class="page-title">Page not found</h1>
+  <p class="page-lede">That link doesn’t exist. Head back home.</p>
+  <p style="margin-top:18px;"><a href="/" style="font-weight:850;">Go to homepage →</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="frame">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div>© <span id="y"></span> Brandon Marcello</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="https://www.twitter.com/bmarcello" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/brandonmarcello" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.YouTube.com/@brandonmarcello" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:brandonmarcello@gmail.com">Email</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>
