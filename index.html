@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brandon Marcello</title>
+  <meta name="description" content="In-depth reporting on college football’s biggest stories, with breaking news and analysis on the business shaping the sport’s future." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="minner">
+      <div class="brand"><span class="brand-dot" aria-hidden="true"></span></div>
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="/">Home</a>
+        <a href="/about">Bio</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/media">Media</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-kicker">College Football Insider</div>
+          <h1 class="hero-title">Brandon Marcello</h1>
+          <p class="hero-sub">In-depth reporting on college football’s biggest stories, with breaking news and analysis on the business shaping the sport’s future.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="/portfolio">Read the work</a>
+            <a class="btn" href="/about">Full bio</a>
+            <a class="btn" href="/contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo" aria-hidden="true">
+          <img src="/images/headshot-home.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="h2">Featured</div>
+      <div class="story-hero">
+        <img src="/images/indiana-hero.jpg" alt="" />
+        <div class="content">
+          <div class="kicker">Featured story</div>
+          <div class="title">Indiana football: greatest sports stories</div>
+          <p class="desc">The improbable rise that turned a doormat into a standard-bearer — and what it signals for the old order.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.cbssports.com/college-football/news/indiana-football-greatest-sports-stories/#" target="_blank" rel="noopener">Read on CBS Sports</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="h2">Series spotlight</div>
+      <div class="story-hero" style="min-height:260px;">
+        <img src="/images/project2035-hero.jpg" alt="" />
+        <div class="content">
+          <div class="kicker">Project 2035</div>
+          <div class="title">CFB’s future: power, money and the endgame</div>
+          <p class="desc">A four-part investigative series on athlete power, expiring media rights, super-league gravity, and the squeeze on mid-majors.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.cbssports.com/college-football/news/after-the-house-v-ncaa-settlement-will-college-athletes-be-able-to-gain-real-power-by-2035/" target="_blank" rel="noopener">Part I</a>
+            <a class="btn" href="https://www.cbssports.com/college-football/news/after-the-house-v-ncaa-settlement-expiring-media-rights-deals-set-to-reshape-college-football-by-2035/" target="_blank" rel="noopener">Part II</a>
+            <a class="btn" href="https://www.cbssports.com/college-football/news/after-the-house-v-ncaa-settlement-is-a-super-league-college-football-realignments-inevitable-final-form/" target="_blank" rel="noopener">Part III</a>
+            <a class="btn" href="https://www.cbssports.com/college-football/news/after-the-house-v-ncaa-settlement-mid-major-schools-fighting-for-seat-at-college-footballs-shrinking-table/" target="_blank" rel="noopener">Part IV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="h2">Latest stories</div>
+      <div id="latest-stories" class="latest-grid" aria-live="polite"></div>
+      <script src="/js/latest.js" defer></script>
+    </section>
+
+    <section class="section">
+      <div class="grid2">
+        <div class="card pad">
+          <div class="card-title">Portfolio</div>
+          <div class="card-meta">Features, investigative work, explanatory reporting and breaking news.</div>
+          <div style="margin-top:12px;"><a class="btn primary" href="/portfolio">Browse stories</a></div>
+        </div>
+        <div class="card pad">
+          <div class="card-title">Media</div>
+          <div class="card-meta">The College Football Insiders playlist and other appearances.</div>
+          <div style="margin-top:12px;"><a class="btn primary" href="/media">Watch</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Brandon Marcello</div>
+      <div class="social">
+        <a href="https://www.instagram.com/brandonmarcello" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.twitter.com/bmarcello" target="_blank" rel="noopener">X</a>
+        <a href="https://www.YouTube.com/@brandonmarcello" target="_blank" rel="noopener">YouTube</a>
+        <a href="/contact">Email</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
