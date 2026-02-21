@@ -109,9 +109,7 @@ nav a{
 
 .latest-title{
   font-weight:800;
-  font-size:14px;
-  line-height:1.25;
-  color:var(--text);
+  font-family:inherit;
 }
 
 .latest-meta{
@@ -119,14 +117,4 @@ nav a{
   color:var(--muted);
 }
 
-/* Slightly larger on desktop, still restrained */
-@media(min-width:900px){
-  .latest-card{
-    grid-template-columns:64px 1fr;
-  }
-  .latest-thumb{
-    width:64px;
-    height:44px;
-  }
-}
 
