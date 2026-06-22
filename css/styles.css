@@ -56,18 +56,19 @@ a:hover{ color:var(--accent); }
   flex-direction:column;
   line-height:1.05;
 }
-.brand small{
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.18em;
-  font-weight:800;
-  font-size:11px;
+.brand small {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .22em; /* Increases tracking for the insider tag */
+  font-weight: 800;
+  font-size: 10px;
 }
-.brand strong{
+.brand strong {
   font-family: Newsreader, serif;
-  font-weight:750;
-  letter-spacing:-.02em;
-  font-size:22px;
+  font-weight: 750;
+  letter-spacing: -.01em;
+  font-size: 24px;
+  margin-top: 2px;
 }
 .nav{
   display:flex;
@@ -103,13 +104,14 @@ a:hover{ color:var(--accent); }
   font-weight:900;
   font-size:11px;
 }
-.h1{
+.h1 {
   font-family: Newsreader, serif;
-  font-weight:750;
-  letter-spacing:-.03em;
-  line-height:1.02;
-  font-size: clamp(42px, 4.4vw, 68px);
-  margin: 10px 0 0;
+  font-weight: 750;
+  letter-spacing: -.03em;
+  line-height: 1.08; /* Gives the large letters room to breathe without floating apart */
+  font-size: clamp(42px, 4.4vw, 64px);
+  color: var(--text);
+  margin: 12px 0 0;
 }
 .lede{
   margin-top: 14px;
@@ -197,14 +199,15 @@ a:hover{ color:var(--accent); }
   border-top: 1px solid var(--border);
 }
 .section-title {
+  margin: 0 0 24px;
   font-size: 11px;
-  letter-spacing: 0.28em; /* Opens up the letter spacing */
+  color: var(--accent); /* Swapped from muted gray to your bold navy accent */
+  letter-spacing: 0.26em; /* Opens up the lettering for a clean, modern look */
+  text-transform: uppercase;
   font-weight: 800;
-  color: #0f2747; /* Uses your primary navy accent instead of muted grey */
-  border-bottom: 2px solid #0f2747;
+  border-bottom: 2px solid var(--accent); /* Adds a sharp editorial anchor line */
   display: inline-block;
   padding-bottom: 4px;
-  margin-bottom: 24px;
 }
 
 /* Portfolio grid (Reseda-ish): big tiles, varying sizes */
@@ -417,4 +420,21 @@ a:hover{ color:var(--accent); }
   transform: translateY(-3px); /* Subtle lifting effect */
   border-color: #0f2747 !important; /* Highlights card border with your navy accent color */
   box-shadow: 0 12px 30px rgba(11,18,32,0.08) !important;
+}
+/* Fluid UI Transitions */
+.navlink, .hero-links a, .latest-card {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Subtle accent shifting on text link hovers */
+.hero-links a:hover {
+  border-bottom-color: var(--accent);
+  opacity: 0.8;
+}
+
+/* Elevates the dynamic latest stories cards slightly on hover */
+.latest-card:hover {
+  transform: translateY(-2px);
+  background: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(11,18,32,0.06) !important;
 }
