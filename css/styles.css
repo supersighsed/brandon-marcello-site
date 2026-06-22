@@ -196,13 +196,15 @@ a:hover{ color:var(--accent); }
   padding: 44px 0;
   border-top: 1px solid var(--border);
 }
-.section-title{
-  margin: 0 0 18px;
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  font-weight:900;
+.section-title {
+  font-size: 11px;
+  letter-spacing: 0.28em; /* Opens up the letter spacing */
+  font-weight: 800;
+  color: #0f2747; /* Uses your primary navy accent instead of muted grey */
+  border-bottom: 2px solid #0f2747;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
 }
 
 /* Portfolio grid (Reseda-ish): big tiles, varying sizes */
@@ -406,4 +408,13 @@ a:hover{ color:var(--accent); }
 @media(min-width: 980px){
   .hero-grid{ align-items: end; }
   .hero-media{ transform: translateY(-18px) translateX(6px); }
+}
+.latest-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.latest-card:hover {
+  transform: translateY(-3px); /* Subtle lifting effect */
+  border-color: #0f2747 !important; /* Highlights card border with your navy accent color */
+  box-shadow: 0 12px 30px rgba(11,18,32,0.08) !important;
 }
