@@ -74,25 +74,25 @@
       </div>
     </div>
   </section>
-<!-- Clean Media Section with Correct YouTube Embed Link -->
+<!-- Fully Aligned Media Section -->
 <section class="section">
   <div class="section-title">On Air & Media</div>
-  <div class="media-grid">
+  <div class="media-grid" style="align-items: center;">
     
-    <!-- Left Side: Video Embed Container -->
-    <div class="media-tile">
-      <iframe src="https://www.youtube.com/embed/ECXlwPV8CN4" title="Brandon Marcello Broadcast Segment" allowfullscreen></iframe>
+    <!-- Left Side: Video (Spans 6 columns cleanly, no white empty background) -->
+    <div class="media-tile" style="background: transparent; border: none; box-shadow: none;">
+      <iframe src="https://www.youtube.com/embed/ECXlwPV8CN4" title="Brandon Marcello Broadcast Segment" allowfullscreen style="border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);"></iframe>
     </div>
     
-    <!-- Right Side: Content Card Matching Your Site's Style Docs -->
-    <div class="card pad" style="display: flex; flex-direction: column; justify-content: center; background: rgba(255,255,255,0.85);">
+    <!-- Right Side: Text Card (Now uses 'media-tile' class to split the screen 50/50) -->
+    <div class="media-tile card pad" style="display: flex; flex-direction: column; justify-content: center; background: rgba(255,255,255,0.85); padding: 32px; height: 100%;">
       <div style="font-size: 11px; text-transform: uppercase; letter-spacing: .18em; font-weight: 800; color: var(--muted);">
         Multimedia Analysis
       </div>
-      <h3 style="font-family: Newsreader, serif; font-weight: 750; letter-spacing: -.02em; font-size: 30px; line-height: 1.2; color: var(--text); margin: 10px 0 0 0;">
+      <h3 style="font-family: Newsreader, serif; font-weight: 750; letter-spacing: -.02em; font-size: 28px; line-height: 1.2; color: var(--text); margin: 10px 0 0 0;">
         Broadcast Insights & Press Row Reports
       </h3>
-      <p style="color: var(--muted); margin-top: 12px; font-size: 14px; line-height: 1.55; max-width: 44ch;">
+      <p style="color: var(--muted); margin-top: 12px; font-size: 14px; line-height: 1.55;">
         Deep-dive breakdowns, podcast discussions, and live analysis covering the shifting landscape of national college football.
       </p>
       <div class="hero-links" style="margin-top: 20px;">
